@@ -1,0 +1,54 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <div class="calc-body">
+        <div class="calc-screen">
+            <div class="calc-inputs" id="userInput"></div>
+            <div class="calc-result" id="userResult"></div>
+        </div>
+        <div class="calc-button-row">
+            <button class="button-cancel">C</button>
+        </div>
+        <div class="calc-button-row">
+            <button class="button">7</button>
+            <button class="button">8</button>
+            <button class="button">9</button>
+            <button class="button">/</button>
+        </div>
+        <div class="calc-button-row">
+            <button class="button">4</button>
+            <button class="button">5</button>
+            <button class="button">6</button>
+            <button class="button">*</button>
+
+        </div>
+        <div class="calc-button-row">
+            <button class="button">1</button>
+            <button class="button">2</button>
+            <button class="button">3</button>
+            <button class="button">-</button>
+
+        </div>
+        <div class="calc-button-row">
+            <button class="button">,</button>
+            <button class="button">0</button>
+            <button class="button-res">=</button>
+            <button class="button">+</button>
+        </div>
+    </div>
+    <div class="calc-historical-view" id="calcsHistory">
+    </div>
+    <div class="calc-manual">
+        1) В калькуляторе есть ограничение на операции только с двумя операндами, программа не позволит ввести неправильное выражение.
+        <br />
+        <br />
+        2) В правом от калькулятора списке подгружаются расчёты пользователя с текущем IP адресом за сегодня.
+        <br />
+        <br />
+        3) Для повторения предыдущего расчёта нужно кликнуть в правом от калькулятора списке по синему выражению - оно перенесётся в калькулятор.
+        <br />
+        <br />
+        4) Новые расчёты так же динамически добавляются в конец.
+    </div>
+</div>
