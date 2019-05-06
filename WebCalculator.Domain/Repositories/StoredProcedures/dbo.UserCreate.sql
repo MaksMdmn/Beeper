@@ -1,0 +1,7 @@
+﻿CREATE PROCEDURE UserCreate
+@IpAddress VARCHAR(20),
+@UserId INT OUTPUT
+AS
+INSERT INTO dbo.Users (IpAddress)
+VALUES (@IpAddress)
+SET @UserId = SCOPE_IDENTITY()

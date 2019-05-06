@@ -1,16 +1,11 @@
 ﻿using Ninject;
 using Ninject.Modules;
 using Ninject.Web.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
-using System.Web.Optimization;
 using System.Web.Routing;
-using WebCalculator.App_Start;
+using WebCalculator.Web.App_Start;
 
-namespace WebCalculator
+namespace WebCalculator.Web
 {
     public class MvcApplication : System.Web.HttpApplication
     {

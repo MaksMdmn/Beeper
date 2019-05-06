@@ -1,12 +1,8 @@
 ﻿using Ninject.Modules;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using WebCalculator.Repositories;
-using WebCalculator.Repositories.Interfaces;
+using WebCalculator.Domain.Repositories;
+using WebCalculator.Domain.Repositories.Interfaces;
 
-namespace WebCalculator.App_Start
+namespace WebCalculator.Web.App_Start
 {
     public class NinjectRegistration : NinjectModule
     {

@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Linq;
 using System.Web.Mvc;
-using WebCalculator.DTOs;
-using WebCalculator.Helpers;
-using WebCalculator.Models;
-using WebCalculator.Repositories.Interfaces;
+using WebCalculator.Domain.DTOs;
+using WebCalculator.Domain.Helpers;
+using WebCalculator.Domain.Models;
+using WebCalculator.Domain.Repositories.Interfaces;
 
-namespace WebCalculator.Controllers
+namespace WebCalculator.Web.Controllers
 {
     public class CalcController : Controller
     {
