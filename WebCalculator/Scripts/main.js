@@ -3,10 +3,11 @@
     var resultElement = document.getElementById('userResult');
     var historyElement = document.getElementById('calcsHistory');
     var isNewCalc = false;
-    var regEx = /^[^+*\/]([\-])?([0-9]+(\,)?([0-9]+)?)?([+\-*\/])?([0-9]+(\,)?([0-9]+)?)?$/; 
+    var regEx = /^[^+*\/\,]([\-\,])?([0-9]+(\,)?([0-9]+)?)?([+\-*\/])?([0-9]+(\,)?([0-9]+)?)?$/; 
     //regEx expression needs to check if user inputs are correct. 
     //It will restrict any inputs, after two operands and math operation were fully introduced.
-    //In case if problems will appear https://regex101.com/r/DBuiSj/4
+    //In case if problems will appear https://regex101.com/r/DBuiSj/6
+
 
     $('.button').on('click', function () {
         if (isNewCalc) {
@@ -21,7 +22,7 @@
         if (regEx.test(inputedText)) {
             inputElement.textContent = inputedText;
         } else {
-            alert('Please check if your inputs are correct.');
+            alert('Пожалуйста, проверьте вводные параметры и повторите попытку.');
         }
 
     });
@@ -31,6 +32,7 @@
         inputElement.textContent = '';
     });
 
+    //Forming an ajax request to send user inputs to server
     $('.button-res').on('click', function () {
         $.ajax({
             type: "POST",
@@ -43,17 +45,20 @@
                 isNewCalc = true;
             },
             error: function (data) {
-                resultElement.textContent = 'Error appeared, check console.log() for details.'
+                resultElement.textContent = 'Ошибка. Повторите попытку.'
+                alert('При расчёте данного выражения возникла ошибка: ' + inputElement.textContent + '\n Пожалуйста, проверьте правильность ввода и повторите попытку.');
                 console.log('Bad request', data);
             }
         });
     });
 
+    //Feature - to throw previous calculations to calculator by click.
     $(document).on('click', '.historical', function () {
         resultElement.textContent = '';
         inputElement.textContent = this.textContent;
     })
 
+    //Load previous calculations, when element is ready.
     $('calc-historical-view').ready(function () {
         $.ajax({
             type: "POST",
@@ -70,7 +75,7 @@
         });
     })
 
-
+    //Function to form new view element in div with historical calculations.
     function addNewHistiricalDiv(infoText, valueText, parent) {
         var infoElement = document.createElement('div');
         var valueElement = document.createElement('div');

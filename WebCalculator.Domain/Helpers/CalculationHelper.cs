@@ -17,6 +17,7 @@ namespace WebCalculator.Domain.Helpers
             {"/", CalcOperation.Division }
         };
 
+        //Convert mathExpresion to Calculation object
         public static Calculation ToCalculaton(this string mathExpression)
         {
             Calculation result = new Calculation();
@@ -49,6 +50,7 @@ namespace WebCalculator.Domain.Helpers
             throw new ArgumentException("Incorrect format of math expression with 2 operands.");
         }
 
+        //Convert Calculation objecet to CalculationDto object
         public static CalculationDto ToCalculationDto(this Calculation calculation)
         {
             return new CalculationDto
@@ -59,6 +61,7 @@ namespace WebCalculator.Domain.Helpers
             };
         }
 
+        //Convert Calculation object to mathExpresion string
         public static string ToMathExpression(this Calculation calculation)
         {
             return new StringBuilder()
