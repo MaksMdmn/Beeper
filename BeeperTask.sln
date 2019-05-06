@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebCalculator.Domain", "Web
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebCalculator.Domain.Tests", "WebCalculator.Domain.Tests\WebCalculator.Domain.Tests.csproj", "{1CDB08C8-2BB7-4B1A-857A-E0FD65902061}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebCalculator.Web.Tests", "WebCalculator.Web.Tests\WebCalculator.Web.Tests.csproj", "{82AE1C88-9917-4623-B83B-8DDCC8BFB3F7}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{1CDB08C8-2BB7-4B1A-857A-E0FD65902061}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1CDB08C8-2BB7-4B1A-857A-E0FD65902061}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1CDB08C8-2BB7-4B1A-857A-E0FD65902061}.Release|Any CPU.Build.0 = Release|Any CPU
-		{82AE1C88-9917-4623-B83B-8DDCC8BFB3F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{82AE1C88-9917-4623-B83B-8DDCC8BFB3F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{82AE1C88-9917-4623-B83B-8DDCC8BFB3F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{82AE1C88-9917-4623-B83B-8DDCC8BFB3F7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
